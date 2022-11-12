@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Titillium+Web:wght@300&display=swap');
+
 /* Header */
+body {
+    background-color: #3d185b;
+    font-family: Oswald, sans-serif;
+}
+
+.title {
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: Roboto, Titillium Web ;
+    font-size: 2.5rem;
+}
 
 #logo{
     display: flex;
@@ -6,10 +19,20 @@
     font-size: 125%;
 }
 
-.homepage_content {
+.homepage_content_title {
     display: flex;
     justify-content: center;
-    color:blue;
+    color:whitesmoke;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.homepage_paragraph {
+    display: flex;
+    justify-content: center;
+    color:whitesmoke;
+    text-align: center;
+    font-size: 1.8rem;
 }
 
 .quiz_image {
@@ -21,6 +44,27 @@
 .button_area {
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 7px auto;
+    max-width: 300px;
+   
+}
 
+.start_btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 7px auto;
+    max-width: 300px;
+   
+}
+
+
+.button_style {
+    background: grey;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 30px;
 }
