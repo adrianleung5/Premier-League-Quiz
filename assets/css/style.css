@@ -48,6 +48,8 @@ body {
     flex-wrap: wrap;
     margin: 7px auto;
     max-width: 300px;
+    padding: 1rem;
+    
    
 }
 
@@ -56,8 +58,8 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 7px auto;
-    max-width: 300px;
+    margin: 12px auto;
+    max-width: 115px;
    
 }
 
