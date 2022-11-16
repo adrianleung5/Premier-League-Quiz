@@ -9,7 +9,10 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title> Premier league Legends Quiz </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+ 
+    <title> Premier league Quiz </title>
 
     </head>
 
@@ -36,28 +39,52 @@
                  <!-- Buttons -->
                  
                  <div class="button_area">
-                    <a href= "login.html" class="button_style"> Instructions </a>
-                    <a href = "#" class="button_style"> button 2 </a>
-                    <a href = "#" class="button_style"> button 3 </a>
+                    <button class = "button" id="instruction_btn"> Instructions </button>
+                    <button class = "button" id="start_button"> Lets get started  <i class="fa fa-futbol-o fa-beat-fade" style="background-color:cornsilk; color: #3d185b"></i> </button>
+
                 </div>
 
-                <!-- <div class="starts_btn">
-                    <a href = "#" class="button_style"> button 3 </a>
-                </div> -->
-
-                <!-- Modal Box -->
-
-                <div id="instructions_box" class="modal_box">
-                    <ol class="Instructions_list">
-                        <h2> Instructions </h2>
+                <!-- Modal Instructions -->
+                <div id="instructions_box" class="modal-box">
+                    <div class = "modal-content"> 
+                        <p class = "close-modal"> 
+                        <i class="fa fa-close"> </i> 
+                    </p>
+                        <h3 class = "modal-title"> Premier league Quiz Instructions</h3>
+                    <ol class="instructions-list">
                         <li>Create a username</li>
                         <li>8 questions with 4 options of answers</li>
                         <li>Only 1 correct answer per question</li>
                         <li> You will have 60 seconds to answer</li>
                         <li>Have fun!</li>
                     </ol>
-                        
+                    </div>
                 </div>
+         </section>
+
+         <!-- Sign up  -->
+         <section id = "sign_up">
+            <div class ="sign-up-style">
+            <h2 class = "sign-up-title"> hope you enjoyed the quiz please sign up </h2>
+                <form action="sign_up.html" class="sign-up-form">
+                <label class ="signup-label"> Name </label> 
+                <input id ="name" type = "text" class="input-name" placeholder ="First name" required>
+                <label class ="signup-label"> Email </label> 
+                <input id ="email" type = "email" class="input-name" placeholder ="something@gmail.com" required>
+                <label class ="signup-label"> Feedback questions </label> 
+                <textarea id = "feedback" class = "feedback-text" placeholder="Please suggest future questions"> </textarea>
+                <button class= "sign-up-button" type="submit"> register </button>
+                </form>
+
+
+            </div>
+
+         </section>
+
+
+
                 <script src="assets/js/script.js"></script>
 
         </body>
+        
+        </html>
