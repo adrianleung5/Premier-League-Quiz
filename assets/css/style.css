@@ -74,7 +74,11 @@ html * {
     font-weight: 600;
     background-color: whitesmoke;
     color: #3d185b;
+    box-shadow: 0 5px 15px blueviolet;
 }
+
+
+
     
 /* modal  */
 
