@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Love Mindfulness in dublin, Ireland">
+    <meta name="keyords" content="football, soccer, premier league, sport">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <section id="homepage">
+        <header>
+            <div id="logo">
+                <h1> <a href="index.html" class="title"> Premier League Quiz </a> </h1>
+            </div>
+
+        </header>
+    </section>
+
+    <section id="username">
+        <div id="username_box" class="username_container">
+            <div class="username-content">
+                <h1 class="quiz-username-title">Please enter your name </h1>
+                <form onsubmit="return false">
+                    <input id="quiz_username" type="text" class="username-text-input" placeholder="Enter your name"
+                        required>
+                    <button id="quiz_button" class="start-quiz-button"> Start quiz</button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="quiz">
+        <p id="welcome"></p>
+        <div class="outer_quiz">
+            <div id="question"> </div>
+            <div id="answer">
+                <div class="option-container" id="optionA" onclick="checkAnswer('A')"> </div>
+                <div class="option-container" id="optionB" onclick="checkAnswer('B')"> </div>
+                <div class="option-container" id="optionC" onclick="checkAnswer('C')"> </div>
+                <div class="option-container" id="optionD" onclick="checkAnswer('D')"> </div>
+                <br>
+                <br>
+                <button class="button" id="next_button" type="button" onclick="nextQuestion()" disabled> Next </button>
+            </div>
+            <div id="progress_bar">
+                <div class="bar" id="progressBar">
+                    <div id="progress-bar"> </div>
+                </div>
+                <p id = "progress_number"></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="assets/js/quiz.js"></script>
+</body>
+
+</html>

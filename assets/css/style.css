@@ -15,11 +15,11 @@ html * {
 .title {
     text-decoration: none;
     color: whitesmoke;
-    font-family: Roboto, Titillium Web ;
+    font-family: Roboto, Titillium Web;
     font-size: 2.5rem;
 }
 
-#logo{
+#logo {
     display: flex;
     justify-content: center;
     font-size: 125%;
@@ -28,7 +28,7 @@ html * {
 .homepage_content_title {
     display: flex;
     justify-content: center;
-    color:whitesmoke;
+    color: whitesmoke;
     text-align: center;
     font-size: 2rem;
 }
@@ -36,7 +36,7 @@ html * {
 .homepage_paragraph {
     display: flex;
     justify-content: center;
-    color:whitesmoke;
+    color: whitesmoke;
     text-align: center;
     font-size: 1.8rem;
 }
@@ -55,14 +55,14 @@ html * {
     padding: 2rem 0;
 }
 
-.start_btn{
+.start_btn {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 12px auto;
     max-width: 115px;
-   
+
 }
 
 .button {
@@ -72,14 +72,18 @@ html * {
     border-radius: 0.5rem;
     font-size: 1.5rem;
     font-weight: 600;
-    background-color: whitesmoke;
+    background-color: navajowhite;
     color: #3d185b;
     box-shadow: 0 5px 15px blueviolet;
 }
 
+.button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    border: 1px solid #999999
+}
 
 
-    
 /* modal  */
 
 .modal-box {
@@ -110,24 +114,34 @@ html * {
     color: whitesmoke;
     font-size: 2rem;
     font-weight: 600;
+    margin: 1.5rem;
 
 }
 
 .modal-title {
-font-size: 1.5rem;
-margin-bottom: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .instructions-list {
-    text-align: center;
+    text-align: left;
     margin-bottom: 1rem;
     font-weight: 600;
     list-style-position: inside;
+    display: inline-block;
 
 }
+
 .instructions-list li {
     padding: 0.5rem;
 }
+
+.instructions {
+    text-align: center;
+
+}
+
+
 
 /* sign up */
 #sign_up {
@@ -162,7 +176,7 @@ margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     width: 100px;
-    font-weight:700;
+    font-weight: 700;
     margin: 1rem auto;
 }
 
@@ -180,3 +194,137 @@ margin-bottom: 1rem;
     border: 3px solid whitesmoke;
     border-radius: 0.4rem;
 }
+
+/* Username input  */
+
+.username-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+    padding: 1rem;
+    border: 3px solid whitesmoke;
+    border: radius;
+    border-radius: 1rem;
+    width: 75%;
+    margin: 15% auto;
+
+}
+
+#username {
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 75px;
+}
+
+.username-container {
+    margin: 7rem;
+
+}
+
+.username-text-input {
+    color: whitesmoke;
+    width: 100%;
+    border-radius: 1.5rem;
+    border: 3px solid whitesmoke;
+    padding: 0.4rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.start-quiz-button {
+    border: 3px solid whitesmoke;
+    border-radius: 2rem;
+    width: 100%;
+    background-color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    margin: 0rem auto 1rem;
+    text-align: center;
+    align-items: center;
+}
+
+/* Quiz */
+#welcome {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.8rem;
+    
+}
+
+#question {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+#answer {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.option {
+    text-align: center;
+    cursor: pointer;
+    min-width: 35rem;
+    border-radius: 1rem;
+    background-color: whitesmoke;
+    border-style: solid;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 2.5rem;
+}
+
+#next_button {
+    width: 52%;
+    background-color: ;
+}
+
+.option-container:hover p {
+    background-color: #3d185b;
+    color: #f0ffff
+    
+}
+
+#quiz {
+    display: none;
+    position: relative;
+
+}
+
+/* Progress bar */
+#progress_bar {
+    padding: 2rem;
+    
+
+}
+
+.bar {
+    width: 75%;
+    text-align: center;
+    height: 10px;
+    background-color: #3d185b;
+    border-style: solid;
+    margin:auto;
+    border-radius: 0px 60px 0px;
+}
+.bar div {
+    height: 100%;
+    border-radius: 0px 60px;
+    background-color: whitesmoke;
+    transition: all 300ms;
+}
+
+#progress_number{
+    text-align: center;
+    color:whitesmoke;
+    font-size: 1.8rem;
+}
+
