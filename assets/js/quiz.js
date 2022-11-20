@@ -14,7 +14,7 @@ const optionD = document.getElementById("optionD")
 
 const quizQuestions = [
     {
-        question: "Q1. When year did Sir Alex Ferguson retire?", 
+        question: "Q1. At the end of which season did Sir Alex Ferguson retire?", 
         optionA: "A - 2010", 
         optionB: "B - 2012",
         optionC: "C - 2009",
@@ -23,66 +23,66 @@ const quizQuestions = [
     },
 
     {
-        question: "Q2 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
+        question: "Q2. Who is currently the longest serving manager in the premier league in their current club?", 
+        optionA: "A - David Moyes", 
+        optionB: "B - Jurgen Klopp",
+        optionC: "C - Pep Guardiola",
+        optionD: "D - Brenden Rodgers",
         correctAnswer: "B"
     },
 
     {
-        question: "Q3 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "Q3. Who has the second highest record number of goals from midfield in the Premier League ?", 
+        optionA: "A - Yaya Toure", 
+        optionB: "B - David Beckham",
+        optionC: "C - Matt Le Tissier",
+        optionD: "D - Paul Scholes",
+        correctAnswer: "A"
     },
 
     {
-        question: "4 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "Q4. Who has the highest number of assits in the premier league", 
+        optionA: "A - Thierry Henry", 
+        optionB: "B - Steven Gerrard",
+        optionC: "C - Ryan Giggs",
+        optionD: "D - Cesc Fabregas",
+        correctAnswer: "C"
     },
 
     {
-        question: "5 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "Q5. When year did Arsene Wenger make his managerial debut?", 
+        optionA: "A - 1994", 
+        optionB: "B - 1998",
+        optionC: "C - 1996",
+        optionD: "D - 1993",
+        correctAnswer: "C"
     },
 
     {
-        question: "6 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "6 When season did Alan Shearer set the record for the highest premier league goals in a season?", 
+        optionA: "A - 1993", 
+        optionB: "B - 1996",
+        optionC: "C - 2000",
+        optionD: "D - 1994",
+        correctAnswer: "D"
     },
 
     {
-        question: "7 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "7 What player has the record amount of red cards in the premier league?", 
+        optionA: "A - Duncan Ferguson", 
+        optionB: "B - Patrick Viera",
+        optionC: "C - Roy Keane",
+        optionD: "D - Richard Dunne",
+        correctAnswer: "A"
     },
 
     {
-        question: "8 When year did Sir Alex Ferguson retire?", 
-        optionA: "A - 2010", 
-        optionB: "B - 2013",
-        optionC: "C - 2009",
-        optionD: "D - 2014",
-        correctAnswer: "B"
+        question: "8 Who has the highest amount of premier league appearances?", 
+        optionA: "A - Ryan Giggs", 
+        optionB: "B - James Milner",
+        optionC: "C - Frank Lampard",
+        optionD: "D - Gareth Barry",
+        correctAnswer: "D"
     }
 
 ]
