@@ -12,6 +12,10 @@ html * {
     background-color: #3d185b;
 }
 
+.bg {
+    background
+}
+
 .title {
     text-decoration: none;
     color: whitesmoke;
@@ -107,7 +111,16 @@ html * {
     padding: 1.5rem;
     border: 3px solid whitesmoke;
     border-radius: 1rem;
-    width: 90%;
+    width: 40%;
+}
+.signup-modal-content {
+    text-align: center;
+    color: whitesmoke;
+    margin: 15% auto;
+    padding: 1.5rem;
+    border: 3px solid whitesmoke;
+    border-radius: 1rem;
+    width: 70%;
 }
 
 .close-modal {
@@ -148,6 +161,7 @@ html * {
     width: 100%;
     position: relative;
     bottom: 190px;
+    background-image: url("../imagesform_photo.jpg");
 
 
 }
@@ -175,7 +189,7 @@ html * {
 .sign-up-form {
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 75%;
     font-weight: 700;
     margin: 1rem auto;
 }
@@ -186,6 +200,7 @@ html * {
     margin-bottom: 0.5rem;
     border: 3px solid whitesmoke;
     border-radius: 0.5rem;
+    padding: 0.2rem 0.5rem
 
 }
 
@@ -193,6 +208,9 @@ html * {
     color: whitesmoke;
     border: 3px solid whitesmoke;
     border-radius: 0.4rem;
+    height: 6em;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
 }
 
 /* Username input  */
@@ -328,3 +346,53 @@ html * {
     font-size: 1.8rem;
 }
 
+/* results */
+
+.congrats {
+    font-size: 10rem;
+    text-align: center;
+}
+
+.fail {
+    text-align: center;
+    color: red;
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
+
+.average {
+    text-align: center;
+    color:green;
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
+
+.excellent{
+    text-align: center;
+    color: gold;
+    font-size: 2.5rem;
+    font-weight: bolder;
+
+}
+
+#results_note {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.8rem;
+}
+
+#back_to_home {
+    align-items: center;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+/* Icons */
+.iconstyle {
+    background-color: unset;
+    color:#3d185b;
+
+}

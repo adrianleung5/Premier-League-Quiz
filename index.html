@@ -40,8 +40,7 @@
 
         <div class="button_area">
             <button class="button" id="instruction_btn"> Instructions </button>
-            <button class="button" id="lets_start_button"> Lets get started <i class="fa fa-futbol-o fa-beat-fade"
-                    style="background-color:cornsilk; color: #3d185b"></i> </button>
+            <button class="button" id="lets_start_button"> Lets get started <i class="fa fa-futbol-o iconStyle"> </i> </button>
 
         </div>
 
@@ -63,13 +62,26 @@
                 </div>
             </div>
         </div>
+        <!-- Sign up modal -->
+
+        <div id="signup_box" class="modal-box">
+            <div class="signup-modal-content">
+                <p class="close-signup">
+                    <i class="fa fa-close"> </i>
+                </p>
+                <h3 class="modal-title"> Thanks for Signing up</h3>
+              <p> Thanks for registering we appreciate your feedback</p>
+              <p> We hope you had fun completing the quiz </p>
+            </div>
+        </div>
+        
     </section>
 
     <!-- Sign up  -->
     <section id="sign_up">
         <div class="sign-up-style">
             <h2 class="sign-up-title"> hope you enjoyed the quiz please sign up </h2>
-            <form action="sign_up.html" class="sign-up-form">
+            <form onsubmit="event.preventDefault(); showSignupModal()" class="sign-up-form" id="form">
                 <label class="signup-label"> Name </label>
                 <input id="name" type="text" class="input-name" placeholder="First name" required>
                 <label class="signup-label"> Email </label>
@@ -77,7 +89,7 @@
                 <label class="signup-label"> Feedback </label>
                 <textarea id="feedback" class="feedback-text"
                     placeholder="Please suggest future questions you would like to see on the quiz and any improvements"> </textarea>
-                <button class="sign-up-button" type="submit"> register </button>
+                <button class="button" type="submit"> Register </button>
             </form>
 
 

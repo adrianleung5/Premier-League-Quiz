@@ -12,7 +12,7 @@ const optionC = document.getElementById("optionC");
 const optionD = document.getElementById("optionD")
 
 
-const quizQuestions = [
+const allQuizQuestions = [
     {
         question: "Q1. At the end of which season did Sir Alex Ferguson retire?", 
         optionA: "A - 2010", 
@@ -23,7 +23,7 @@ const quizQuestions = [
     },
 
     {
-        question: "Q2. Who is currently the longest serving manager in the premier league in their current club?", 
+        question: "Q2. Who is currently the longest serving manager in the Premier League in their current club?", 
         optionA: "A - David Moyes", 
         optionB: "B - Jurgen Klopp",
         optionC: "C - Pep Guardiola",
@@ -32,7 +32,7 @@ const quizQuestions = [
     },
 
     {
-        question: "Q3. Who has the second highest record number of goals from midfield in the Premier League ?", 
+        question: "Q3. Who has the second highest record number of goals from midfield in the Premier League?", 
         optionA: "A - Yaya Toure", 
         optionB: "B - David Beckham",
         optionC: "C - Matt Le Tissier",
@@ -41,7 +41,7 @@ const quizQuestions = [
     },
 
     {
-        question: "Q4. Who has the highest number of assits in the premier league", 
+        question: "Q4. Who has the highest number of assits in the premier league?", 
         optionA: "A - Thierry Henry", 
         optionB: "B - Steven Gerrard",
         optionC: "C - Ryan Giggs",
@@ -59,7 +59,7 @@ const quizQuestions = [
     },
 
     {
-        question: "6 When season did Alan Shearer set the record for the highest premier league goals in a season?", 
+        question: "Q6. When season did Alan Shearer set the record for the highest premier league goals in a season?", 
         optionA: "A - 1993", 
         optionB: "B - 1996",
         optionC: "C - 2000",
@@ -68,7 +68,7 @@ const quizQuestions = [
     },
 
     {
-        question: "7 What player has the record amount of red cards in the premier league?", 
+        question: "Q7. What player has the record amount of red cards in the premier league?", 
         optionA: "A - Duncan Ferguson", 
         optionB: "B - Patrick Viera",
         optionC: "C - Roy Keane",
@@ -77,7 +77,32 @@ const quizQuestions = [
     },
 
     {
-        question: "8 Who has the highest amount of premier league appearances?", 
+        question: "Q8. What player the highest amount of premier league appearances?", 
+        optionA: "A - Ryan Giggs", 
+        optionB: "B - James Milner",
+        optionC: "C - Frank Lampard",
+        optionD: "D - Gareth Barry",
+        correctAnswer: "D"
+    },
+    {
+        question: "Q9. What player the highest amount of premier league appearances?", 
+        optionA: "A - Ryan Giggs", 
+        optionB: "B - James Milner",
+        optionC: "C - Frank Lampard",
+        optionD: "D - Gareth Barry",
+        correctAnswer: "D"
+    },
+    {
+        question: "10. What player the highest amount of premier league appearances?", 
+        optionA: "A - Ryan Giggs", 
+        optionB: "B - James Milner",
+        optionC: "C - Frank Lampard",
+        optionD: "D - Gareth Barry",
+        correctAnswer: "D"
+    },
+
+    {
+        question: "11. What player the highest amount of premier league appearances?", 
         optionA: "A - Ryan Giggs", 
         optionB: "B - James Milner",
         optionC: "C - Frank Lampard",
@@ -86,8 +111,11 @@ const quizQuestions = [
     }
 
 ]
+// shuffling the original array
+const shuffleArray = allQuizQuestions.sort(()=> 0.5 - Math.random());
+const quizQuestions = shuffleArray.slice(0,8)
 let currentQuestion = 0;
-let counter = 70;
+let counter = 75;
 
 
 // event listeners
@@ -145,12 +173,14 @@ function getQuizQuestions () {
    
 } 
 
+let totalCorrectAnswer = 0;
 function checkAnswer (option) {
     const selectedAnswer = document.getElementById(option);
     const questions = quizQuestions[currentQuestion];
     const correctAnswer = document.getElementById (questions.correctAnswer) 
     if (selectedAnswer.innerText===correctAnswer.innerText) {
         selectedAnswer.style.backgroundColor="green"; 
+        totalCorrectAnswer++;
     }
     else {
         selectedAnswer.style.backgroundColor="red";
@@ -177,7 +207,14 @@ function nextQuestion () {
 }
 
  function getResult () {
-    window.location = "../result.html"
+    const result = (totalCorrectAnswer/8) *100;
+    // store the variable result which can be accessed by another js file
+    localStorage.setItem("result",result.toString());
+    const username = checkInput.value;
+    localStorage.setItem("username", username);
+    // redirect user to results page
+
+    window.location = "results.html"
 }
 
 document.addEventListener("DOMContentLoaded", function () {
