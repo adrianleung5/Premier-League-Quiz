@@ -6,14 +6,8 @@
 
 body {
     font-family: Oswald, sans-serif;
-}
-
-html * {
     background-color: #3d185b;
-}
 
-.bg {
-    background
 }
 
 .title {
@@ -48,6 +42,18 @@ html * {
 .quiz_image {
     display: flex;
     justify-content: center;
+    animation:quiz_image;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes quiz_image {
+    from {
+         transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
 }
 
 .button_area {
@@ -112,8 +118,10 @@ html * {
     border: 3px solid whitesmoke;
     border-radius: 1rem;
     width: 40%;
+    background-color:#3d185b;
+
 }
-.signup-modal-content {
+.timeout-modal-content, .signup-modal-content {
     text-align: center;
     color: whitesmoke;
     margin: 15% auto;
@@ -121,13 +129,16 @@ html * {
     border: 3px solid whitesmoke;
     border-radius: 1rem;
     width: 70%;
+    background-color:#3d185b;
+
 }
 
-.close-modal {
+.close-modal, .close-signup {
     color: whitesmoke;
     font-size: 2rem;
     font-weight: 600;
     margin: 1.5rem;
+    cursor: pointer;
 
 }
 
@@ -161,9 +172,7 @@ html * {
     width: 100%;
     position: relative;
     bottom: 190px;
-    background-image: url("../imagesform_photo.jpg");
-
-
+    background-image: url("../images/ball.jpg");
 }
 
 .sign-up-style {
@@ -243,26 +252,23 @@ html * {
 }
 
 .username-text-input {
-    color: whitesmoke;
     width: 100%;
     border-radius: 1.5rem;
     border: 3px solid whitesmoke;
     padding: 0.4rem;
     line-height: 2rem;
     margin-bottom: 2rem;
+    font-size: 1.2rem;
 }
 
-.start-quiz-button {
-    border: 3px solid whitesmoke;
+#quiz_button {
     border-radius: 2rem;
-    width: 100%;
-    background-color: whitesmoke;
+    width: 105%;
     text-transform: uppercase;
     font-size: 1.3rem;
     padding: 0.5rem 1rem;
     margin: 0rem auto 1rem;
-    text-align: center;
-    align-items: center;
+   
 }
 
 /* Quiz */
@@ -328,14 +334,14 @@ html * {
     width: 75%;
     text-align: center;
     height: 10px;
-    background-color: #3d185b;
+    color: whitesmoke;
     border-style: solid;
     margin:auto;
-    border-radius: 0px 60px 0px;
+    border-radius: 1rem;
 }
 .bar div {
     height: 100%;
-    border-radius: 0px 60px;
+    border-radius: 1 rem;
     background-color: whitesmoke;
     transition: all 300ms;
 }
@@ -348,7 +354,7 @@ html * {
 
 /* results */
 
-.congrats {
+.congrats, .timeout {
     font-size: 10rem;
     text-align: center;
 }
@@ -391,8 +397,13 @@ html * {
 }
 
 /* Icons */
-.iconstyle {
+.fa {
     background-color: unset;
-    color:#3d185b;
-
 }
+
+/* footer style*/
+.contact-us {
+    font-size: 3rem;
+    background-color: antiquewhite;
+    text-align: center;
+ }

@@ -4,6 +4,8 @@ const quizButton = document.getElementById("quiz_button")
 const modalBox = document.getElementById("username");
 const nextButton =document.getElementById("next_button");
 const quizSection =document.getElementById("quiz") ; 
+const navigate = document.getElementById("back_to_home");
+const timeoutBox = document.getElementById("timeout_box")
 
 const question = document.getElementById("question");
 const optionA = document.getElementById("optionA");
@@ -14,7 +16,7 @@ const optionD = document.getElementById("optionD")
 
 const allQuizQuestions = [
     {
-        question: "Q1. At the end of which season did Sir Alex Ferguson retire?", 
+        question: "At the end of which season did Sir Alex Ferguson retire?", 
         optionA: "A - 2010", 
         optionB: "B - 2012",
         optionC: "C - 2009",
@@ -23,7 +25,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q2. Who is currently the longest serving manager in the Premier League in their current club?", 
+        question: "Who is currently the longest serving manager in the Premier League in their current club?", 
         optionA: "A - David Moyes", 
         optionB: "B - Jurgen Klopp",
         optionC: "C - Pep Guardiola",
@@ -32,7 +34,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q3. Who has the second highest record number of goals from midfield in the Premier League?", 
+        question: "Who has the second highest record number of goals from midfield in the Premier League?", 
         optionA: "A - Yaya Toure", 
         optionB: "B - David Beckham",
         optionC: "C - Matt Le Tissier",
@@ -41,7 +43,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q4. Who has the highest number of assits in the premier league?", 
+        question: "Who has the highest number of assits in the premier league?", 
         optionA: "A - Thierry Henry", 
         optionB: "B - Steven Gerrard",
         optionC: "C - Ryan Giggs",
@@ -50,7 +52,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q5. When year did Arsene Wenger make his managerial debut?", 
+        question: "When year did Arsene Wenger make his managerial debut?", 
         optionA: "A - 1994", 
         optionB: "B - 1998",
         optionC: "C - 1996",
@@ -59,7 +61,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q6. When season did Alan Shearer set the record for the highest premier league goals in a season?", 
+        question: "When season did Alan Shearer set the record for the highest premier league goals in a season?", 
         optionA: "A - 1993", 
         optionB: "B - 1996",
         optionC: "C - 2000",
@@ -68,7 +70,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q7. What player has the record amount of red cards in the premier league?", 
+        question: "What player has the record amount of red cards in the premier league?", 
         optionA: "A - Duncan Ferguson", 
         optionB: "B - Patrick Viera",
         optionC: "C - Roy Keane",
@@ -77,7 +79,7 @@ const allQuizQuestions = [
     },
 
     {
-        question: "Q8. What player the highest amount of premier league appearances?", 
+        question: "What player the highest amount of premier league appearances?", 
         optionA: "A - Ryan Giggs", 
         optionB: "B - James Milner",
         optionC: "C - Frank Lampard",
@@ -85,19 +87,19 @@ const allQuizQuestions = [
         correctAnswer: "D"
     },
     {
-        question: "Q9. What player the highest amount of premier league appearances?", 
-        optionA: "A - Ryan Giggs", 
-        optionB: "B - James Milner",
-        optionC: "C - Frank Lampard",
-        optionD: "D - Gareth Barry",
+        question: "Who has won the most premier league titles?", 
+        optionA: "A - Dennis Irwin", 
+        optionB: "B - Ryan Giggs",
+        optionC: "C - Paul Scholes",
+        optionD: "D - Roy Keane",
         correctAnswer: "D"
     },
     {
-        question: "10. What player the highest amount of premier league appearances?", 
-        optionA: "A - Ryan Giggs", 
-        optionB: "B - James Milner",
-        optionC: "C - Frank Lampard",
-        optionD: "D - Gareth Barry",
+        question: "What goalkeeper has the most clean sheets?", 
+        optionA: "A - David Seaman", 
+        optionB: "B - Mark Schwarzer",
+        optionC: "C - Petr Cech",
+        optionD: "D - David James",
         correctAnswer: "D"
     },
 
@@ -120,6 +122,7 @@ let counter = 75;
 
 // event listeners
 quizButton.addEventListener("click", hideModal)
+navigate.addEventListener("click", redirectPage);
 
 
 
@@ -131,6 +134,16 @@ function hideModal () {
     }
 
 }
+
+function redirectPage () {
+    return window.location.assign ("index.html");
+}
+
+// timeout functions
+function showTimeoutModal() {
+    timeoutBox.style.display="block";
+}
+
 // starting quiz from here
 function startQuiz () {
     document.getElementById("progress-bar").setAttribute("style", `width:${0}%`)
@@ -144,7 +157,7 @@ function startQuiz () {
         if (counter === -1) {
             clearInterval(interval);
             // Redirect user to result page
-            window.location = "../timeout.html";
+            showTimeoutModal();
         }
     }, 1000)
 
@@ -152,7 +165,7 @@ function startQuiz () {
 
 // get the questions and options
 function getQuizQuestions () {
-    document.getElementById("progress_number").innerHTML=`question ${currentQuestion+1} of 8 `
+    document.getElementById("progress_number").innerHTML=`Question ${currentQuestion+1} of 8 `
     const questions = quizQuestions [currentQuestion];
     question.innerHTML = "<h1>" + questions.question +" </h1>";
     optionA.innerHTML = "<p class = 'option' id = 'A'>" + questions.optionA + "</p>" ; 
