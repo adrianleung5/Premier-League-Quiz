@@ -29,7 +29,7 @@ html {
 }
 
 .home-image {
-    
+
 }
 
 .homepage_content_title, .result_content_title {
@@ -432,7 +432,8 @@ html {
 .footer-text {
     color: whitesmoke;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
  /*Responsiveness*/

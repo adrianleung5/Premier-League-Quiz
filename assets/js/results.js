@@ -15,7 +15,7 @@ function redirectPage () {
 
 if (result<=50) {
     trophy.setAttribute("style", "color: #4d4b48")
-    resultSection.innerHTML=`<p> Sorry <strong> ${username} </strong> you ll need to better. Do you call yourself a gootball fan?</p>`;
+    resultSection.innerHTML=`<p> Sorry <strong> ${username} </strong> you ll need to better. Do you call yourself a football fan?</p>`;
     score.innerHTML=`<p class = "fail"> ${result}% </p> `;
 }
 

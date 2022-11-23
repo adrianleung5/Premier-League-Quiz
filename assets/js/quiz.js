@@ -92,7 +92,7 @@ const allQuizQuestions = [
         optionB: "B - Ryan Giggs",
         optionC: "C - Paul Scholes",
         optionD: "D - Roy Keane",
-        correctAnswer: "D"
+        correctAnswer: "B"
     },
     {
         question: "What goalkeeper has the most clean sheets?", 
