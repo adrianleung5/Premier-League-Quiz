@@ -4,14 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Love Mindfulness in dublin, Ireland">
+    <meta name="description" content="Premier League Quiz">
     <meta name="keyords" content="football, soccer, premier league, sport">
-
     <link rel="stylesheet" href="assets/css/style.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
     <title> Premier league Quiz </title>
 
 </head>
@@ -56,7 +52,7 @@
                         <li>Create a username</li>
                         <li>8 questions with 4 options of answers</li>
                         <li>Only 1 correct answer per question</li>
-                        <li> You will have 60 seconds to answer</li>
+                        <li> You will have 75 seconds to answer</li>
                         <li>Have fun!</li>
                     </ul>
                 </div>
@@ -79,32 +75,33 @@
 
     <!-- Sign up  -->
     <section id="sign_up">
-        <div class="sign-up-style">
-            <h2 class="sign-up-title"> Please sign up for future quiz updates! </h2>
-            <form onsubmit="event.preventDefault(); showSignupModal()" class="sign-up-form" id="form">
-                <label class="signup-label"> Name </label>
-                <input id="name" type="text" class="input-name" placeholder="First name" required>
-                <label class="signup-label"> Email </label>
-                <input id="email" type="email" class="input-name" placeholder="something@gmail.com" required>
-                <label class="signup-label"> Feedback </label>
-                <textarea id="feedback" class="feedback-text" placeholder="Please suggest future questions and any recommendations you would like to see on the quiz"></textarea>
-                <button class="button" type="submit"> Register </button>
-            </form>
-
-
+        <div id="image">
+            <div class="sign-up-style">
+                <h2 class="sign-up-title"> Please sign up for future quiz updates! </h2>
+                <form onsubmit="event.preventDefault(); showSignupModal()" class="sign-up-form" id="form">
+                    <label class="signup-label"> Name </label>
+                    <input id="name" type="text" class="input-name" placeholder="First name" required>
+                    <label class="signup-label"> Email </label>
+                    <input id="email" type="email" class="input-name" placeholder="something@gmail.com" required>
+                    <label class="signup-label"> Feedback </label>
+                    <textarea id="feedback" class="feedback-text"
+                        placeholder="Please suggest future questions and any recommendations you would like to see on the quiz"></textarea>
+                    <button class="button" type="submit"> Register </button>
+                </form>
+                <footer>
+                    <p class = "footer-text"> Follow us on </p>
+                    <div class="contact-us">
+                        <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </footer>
+            </div>
         </div>
 
     </section>
-
-    <footer>
-        <div class="contact-us">
-            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
 
     <script src="assets/js/script.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>

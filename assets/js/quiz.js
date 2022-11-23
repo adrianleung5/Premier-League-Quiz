@@ -156,7 +156,7 @@ function startQuiz () {
         }
         if (counter === -1) {
             clearInterval(interval);
-            // Redirect user to result page
+            // Display Timeout Modal to user
             showTimeoutModal();
         }
     }, 1000)
@@ -206,11 +206,11 @@ function checkAnswer (option) {
     optionD.style.pointerEvents="none";
     nextButton.removeAttribute("disabled");
     currentQuestion++; // incrementing to next question
+    const progress= ((currentQuestion)/8)*100;
+    document.getElementById("progress-bar").setAttribute("style", `width:${progress}%`)
 }
 
 function nextQuestion () {
-    const progress= ((currentQuestion)/8)*100;
-    document.getElementById("progress-bar").setAttribute("style", `width:${progress}%`)
     if (currentQuestion===8) {
         getResult(); 
     }
