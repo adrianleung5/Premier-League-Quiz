@@ -28,6 +28,10 @@ html {
     padding: 1rem;
 }
 
+.home-image {
+    
+}
+
 .homepage_content_title, .result_content_title {
     display: flex;
     padding-top: 2rem;
