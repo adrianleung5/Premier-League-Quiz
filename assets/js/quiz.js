@@ -1,6 +1,10 @@
+/* get the quiz question when the dom content is loaded */
+
 document.addEventListener("DOMContentLoaded", function () {
     getQuizQuestions();
 })
+
+/* store the variables by getting their respective Ids */
 
 const welcome = document.getElementById("welcome");
 const checkInput = document.getElementById("quiz_username");
@@ -17,6 +21,10 @@ const optionB = document.getElementById("optionB");
 const optionC = document.getElementById("optionC");
 const optionD = document.getElementById("optionD")
 
+/**
+ * This quiz contains a total of 11 questions
+ * which will be randomised to show 8 questions
+ */
 
 const allQuizQuestions = [
     {
@@ -117,13 +125,14 @@ const allQuizQuestions = [
     }
 
 ]
-// shuffling the original array
+/* Shufling the original questions to display random questions 
+* each time the quiz is started */
 const shuffleArray = allQuizQuestions.sort(()=> 0.5 - Math.random());
 const quizQuestions = shuffleArray.slice(0,8)
 let currentQuestion = 0;
 let counter = 75;
 
-// functions
+/* Hide the username modal after the user has inputted their name */
 function hideModal () {
     if (checkInput.value.length>0) {
         modalBox.style.display="none";
@@ -132,16 +141,20 @@ function hideModal () {
 
 }
 
+/* redirect user back to the homepage */
 function redirectPage () {
     return window.location.assign ("index.html");
 }
 
-// timeout functions
+/* display this modal when the user runs out of time */
 function showTimeoutModal() {
     timeoutBox.style.display="block";
 }
 
-// starting quiz from here
+/**  The method is called when the quiz started
+ * The progress bar is deafulted to 0 and greets the user and displays the time
+ * left to finish the quiz
+*/
 function startQuiz () {
     document.getElementById("progress-bar").setAttribute("style", `width:${0}%`)
     quizSection.style.display = "block";
@@ -149,11 +162,12 @@ function startQuiz () {
         welcome.innerHTML = `Hello ${checkInput.value} you have ${counter} seconds left!`;
         counter--;
         if (counter < 15) {
-            welcome.style.color = "red";
+            /* change the 
+            welcome.style.color = "red"; 
         }
         if (counter === -1) {
             clearInterval(interval);
-            // Display Timeout Modal to user
+            /* when the user runs out of time display timeout modal */
             showTimeoutModal();
         }
     }, 1000)
