@@ -28,10 +28,6 @@ html {
     padding: 1rem;
 }
 
-.home-image {
-
-}
-
 .homepage_content_title, .result_content_title {
     display: flex;
     padding-top: 2rem;
@@ -41,7 +37,7 @@ html {
     font-size: 2rem;
 }
 
-.homepage_paragraph {
+.homepage_paragraph, .not_found_paragraph {
     display: flex;
     justify-content: center;
     color: whitesmoke;
@@ -435,6 +431,26 @@ html {
     font-size: 2rem;
     font-weight: bold;
 }
+
+/* 404 error page  */
+
+.button_section {
+	text-align: center;
+	padding: 2rem;
+	padding: 2rem 0rem 4rem 0rem;
+}
+
+.button_section a {
+    text-decoration: none;
+}
+
+.content_title_404 {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
 
  /*Responsiveness*/
   /*4K devices*/

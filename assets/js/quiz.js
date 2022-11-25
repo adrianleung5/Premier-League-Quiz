@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+    getQuizQuestions();
+})
+
 const welcome = document.getElementById("welcome");
 const checkInput = document.getElementById("quiz_username");
 const quizButton = document.getElementById("quiz_button")
@@ -119,13 +123,6 @@ const quizQuestions = shuffleArray.slice(0,8)
 let currentQuestion = 0;
 let counter = 75;
 
-
-// event listeners
-quizButton.addEventListener("click", hideModal)
-navigate.addEventListener("click", redirectPage);
-
-
-
 // functions
 function hideModal () {
     if (checkInput.value.length>0) {
@@ -230,7 +227,14 @@ function nextQuestion () {
     window.location = "results.html"
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    getQuizQuestions();
-})
+// event listeners
+quizButton.addEventListener("click", hideModal)
+navigate.addEventListener("click", redirectPage);
+nextButton.addEventListener("click", nextQuestion);
+optionA.addEventListener("click", function () { checkAnswer('A') }) ;
+optionB.addEventListener("click", function () { checkAnswer('B') });
+optionC.addEventListener("click", function () { checkAnswer('C') });
+optionD.addEventListener("click", function () { checkAnswer('D') });
+
+
 

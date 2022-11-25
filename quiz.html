@@ -7,6 +7,7 @@
     <meta name="description" content="Premier League Quiz">
     <meta name="keyords" content="football, soccer, premier league, sport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
@@ -29,7 +30,8 @@
                 <form onsubmit="return false">
                     <input id="quiz_username" type="text" class="username-text-input" placeholder="Enter your name"
                         required>
-                    <button id="quiz_button" class="button"> Start quiz &nbsp; &nbsp; &nbsp;<i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                    <button id="quiz_button" class="button"> Start quiz &nbsp; &nbsp; &nbsp;<i class="fa fa-arrow-right"
+                            aria-hidden="true"></i></button>
                 </form>
 
             </div>
@@ -37,25 +39,26 @@
         </div>
     </section>
 
-    
+
     <section id="quiz">
         <p id="welcome"></p>
         <div class="outer_quiz">
             <div id="question"> </div>
             <div id="answer">
-                <div class="option-container" id="optionA" onclick="checkAnswer('A')"> </div>
-                <div class="option-container" id="optionB" onclick="checkAnswer('B')"> </div>
-                <div class="option-container" id="optionC" onclick="checkAnswer('C')"> </div>
-                <div class="option-container" id="optionD" onclick="checkAnswer('D')"> </div>
-                <div class = "space"> </div>
-                <button class="button" id="next_button" type="button" onclick="nextQuestion()" disabled> Next <i id = "nextIcon" class="fa fa-hand-o-right iconStyle" aria-hidden="true"></i>
+                <div class="option-container" id="optionA"></div>
+                <div class="option-container" id="optionB"></div>
+                <div class="option-container" id="optionC"></div>
+                <div class="option-container" id="optionD"></div>
+                <div class="space"> </div>
+                <button class="button" id="next_button" type="button" disabled> Next <i id="nextIcon"
+                        class="fa fa-hand-o-right iconStyle" aria-hidden="true"></i>
                 </button>
             </div>
             <div id="progress_bar">
                 <div class="bar" id="progressBar">
                     <div id="progress-bar"> </div>
                 </div>
-                <p id = "progress_number"></p>
+                <p id="progress_number"></p>
             </div>
 
         </div>
@@ -69,10 +72,27 @@
             <div class="timeout">
                 <i class="fa fa-clock-o" aria-hidden="true" id="timeout-icon"></i>
             </div>
-            <button class="button" id="back_to_home"> <i class="fa fa-arrow-left iconStyle" aria-hidden="true"></i>&nbsp; &nbsp; back to
+            <button class="button" id="back_to_home"> <i class="fa fa-arrow-left iconStyle"
+                    aria-hidden="true"></i>&nbsp; &nbsp; back to
                 quiz </button>
         </div>
     </div>
+
+    <footer>
+        <p class="footer-text"> Follow us on </p>
+        <div class="contact-us">
+            <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i
+                    class="fa fa-facebook-square"></i></a>
+            <a class="social-button twitter" href="https://www.twitter.com/" target="_blank"><i
+                    class="fa fa-twitter"></i></a>
+            <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>
+            <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i
+                    class="fa fa-youtube-play"></i></a>
+            <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i
+                    class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
 
     <script src="assets/js/quiz.js"></script>
 </body>
